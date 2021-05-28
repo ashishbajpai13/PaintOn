@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PaintOn</string>
+    <string name="colorpicker_dialog_title">Choose a color</string>
+    <string name="colorpicker_dialog_cancel">Cancel</string>
+    <string name="colorpicker_dialog_ok">OK</string>
+    <string name="undo">Undo</string>
+    <string name="color">Color picker</string>
+    <string name="mode_stroke">Mode: Stroke</string>
+    <string name="mode_fill">Mode: Fill</string>
+    <string name="eraser">Eraser</string>
+    <string name="brush">Brush</string>
+    <string name="colors">Colors</string>
+    <string name="switch_to_paint_mode">Switch to paint mode to select a color</string>
+    <string name="clear">Clear</string>
+    <string name="brush_size">Brush size</string>
+</resources>
