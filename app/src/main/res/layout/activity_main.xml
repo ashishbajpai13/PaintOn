@@ -6,156 +6,234 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainActivity">
 
-    <com.android.painton.ui.customviews.DrawView
-        android:id="@+id/drawView"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/paintTypeContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_centerInParent="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/switchStrokeFill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/changeColorTv"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp"/>
+        <com.android.painton.ui.customviews.DrawView
+            android:id="@+id/drawView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/paintModeTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mode_stroke"
-        android:padding="5dp"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/switchStrokeFill"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchStrokeFill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/changeColorTv" />
 
-    <ImageButton
-        android:id="@+id/ivUndo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/button"
-        android:src="@drawable/ic_undo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/paintModeTv"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/mode_stroke"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switchStrokeFill" />
 
-    <TextView
-        android:id="@+id/undoTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/undo"
-        android:padding="5dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/ivUndo"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <ImageButton
+            android:id="@+id/ivUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_undo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/ivErase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:src="@drawable/ic_eraser"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/undoTv"
-        android:layout_marginLeft="10dp" />
+        <TextView
+            android:id="@+id/undoTv"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:padding="5dp"
+            android:text="@string/undo"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivUndo" />
 
-    <TextView
-        android:id="@+id/paintEraseTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/eraser"
-        android:padding="5dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/ivErase"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <ImageButton
+            android:id="@+id/ivErase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_eraser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/undoTv" />
 
-    <ImageButton
-        android:id="@+id/ivClear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button"
-        android:src="@drawable/ic_clear"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paintEraseTv"
-        android:layout_marginLeft="10dp" />
+        <TextView
+            android:id="@+id/paintEraseTv"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:padding="5dp"
+            android:text="@string/eraser"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivErase" />
 
-    <TextView
-        android:id="@+id/clearTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/clear"
-        android:padding="5dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/ivClear"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <ImageButton
+            android:id="@+id/ivClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_clear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paintEraseTv" />
 
-    <ImageButton
-        android:id="@+id/ivColorPicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/button"
-        android:src="@drawable/ic_color_picker"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/clearTv"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:padding="5dp"
+            android:text="@string/clear"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivClear" />
 
-    <TextView
-        android:id="@+id/changeColorTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/colors"
-        android:padding="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginEnd="5dp"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/ivColorPicker"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageButton
+            android:id="@+id/ivColorPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_color_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.slider.Slider
-        android:id="@+id/strokeWidthSlider"
+        <TextView
+            android:id="@+id/changeColorTv"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:text="@string/colors"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivColorPicker" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/strokeWidthSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:stepSize="1"
+            android:value="5"
+            android:valueFrom="1"
+            android:valueTo="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:thumbColor="@color/cardview_light_background"
+            app:thumbElevation="10dp"
+            app:trackColorActive="@color/cardview_dark_background"
+            app:trackColorInactive="@color/cardview_shadow_end_color" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:text="@string/brush_size"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shapesTypeContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:valueFrom="1"
-        android:valueTo="100"
-        app:trackColorActive="@color/cardview_dark_background"
-        app:trackColorInactive="@color/cardview_shadow_end_color"
-        app:thumbElevation="10dp"
-        app:thumbColor="@color/cardview_light_background"
-        android:value="5"
-        android:stepSize="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="10dp"/>
+        android:layout_height="match_parent"
+        android:visibility="visible">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/brush_size"
-        android:padding="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginEnd="5dp"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <android.opengl.GLSurfaceView
+            android:id="@+id/glSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="0dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/glSurfaceView">
+
+            <TextView
+                android:id="@+id/shapesTitle"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/shapes"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/black"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/drawTriangleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:text="@string/draw_triangle"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/black"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toStartOf="@id/drawSquareButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shapesTitle"
+                app:layout_constraintWidth_percent="0.4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/drawSquareButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:text="@string/draw_square"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/black"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/drawTriangleButton"
+                app:layout_constraintTop_toBottomOf="@id/shapesTitle"
+                app:layout_constraintWidth_percent="0.4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

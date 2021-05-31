@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.android.painton.databinding.ActivitySplashScreenBinding
+import com.android.painton.ui.shape_renderers.MovingShapeRenderer
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -19,9 +20,20 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun init() {
+        binding.glSurfaceView.setRenderer(MovingShapeRenderer())
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, SelectionActivity::class.java))
             finish()
-        }, 3000)
+        }, 5000)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.glSurfaceView.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.glSurfaceView.onPause()
     }
 }

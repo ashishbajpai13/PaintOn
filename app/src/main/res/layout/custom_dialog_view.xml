@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/titleTv"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_shape_colors"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="5dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pickerText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:background="@drawable/stroke_bg"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_dropper_small"
+        app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pickerText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/stroke_bg"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_dropper_small"
+        app:layout_constraintTop_toBottomOf="@id/pickerText1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pickerText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/stroke_bg"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_dropper_small"
+        app:layout_constraintTop_toBottomOf="@id/pickerText2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pickerText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/stroke_bg"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_dropper_small"
+        app:layout_constraintTop_toBottomOf="@id/pickerText3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pickerText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/stroke_bg"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_dropper_small"
+        app:layout_constraintTop_toBottomOf="@id/pickerText4" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pickerText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/stroke_bg"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_dropper_small"
+        app:layout_constraintTop_toBottomOf="@id/pickerText5" />
+
+    <TextView
+        android:id="@+id/okTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/colorpicker_dialog_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pickerText6" />
+
+    <TextView
+        android:id="@+id/cancelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/colorpicker_dialog_cancel"
+        app:layout_constraintEnd_toStartOf="@id/okTv"
+        app:layout_constraintTop_toBottomOf="@id/pickerText6"
+        app:layout_constraintTop_toTopOf="@id/okTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

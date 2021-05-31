@@ -13,4 +13,11 @@
     <string name="switch_to_paint_mode">Switch to paint mode to select a color</string>
     <string name="clear">Clear</string>
     <string name="brush_size">Brush size</string>
+    <string name="welcome_message">Hi, what are you upto today?</string>
+    <string name="sketch">Sketch</string>
+    <string name="draw_shapes">Draw Shapes</string>
+    <string name="shapes">Shapes</string>
+    <string name="draw_triangle">Draw Triangle</string>
+    <string name="draw_square">Draw Square</string>
+    <string name="select_shape_colors">Select colors for your shape</string>
 </resources>
